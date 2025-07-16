@@ -4,12 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda | Centro Lalín</title>
+  <title>Carrito | Galicia Migrante</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="shortcut icon" href="../asset/images/favicon.ico" type="image/x-icon" />
-  <!-- 
   <style>
-    /* Mejora visual para el grid si el style.css no lo incluye correctamente */
     .productos-section {
       padding: 2rem;
       background-color: var(--gray-light, #f9f9f9);
@@ -17,7 +15,7 @@
 
     .productos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
@@ -30,17 +28,12 @@
       padding: 1rem;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .producto-card:hover {
-      transform: translateY(-4px);
     }
 
     .producto-card img {
-      max-width: 100%;
-      height: 160px;
-      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
       border-radius: 6px;
       margin-bottom: 0.75rem;
     }
@@ -57,27 +50,48 @@
       margin-bottom: 0.5rem;
     }
 
-    .producto-card .precio {
-      font-weight: bold;
-      color: green;
-      margin-bottom: 0.75rem;
-    }
-
     .producto-card button {
       background-color: var(--primary, #1e3a8a);
       color: var(--white, #fff);
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.8rem;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      margin: 0 0.25rem;
     }
 
     .producto-card button:hover {
       background-color: var(--primary-dark, #1e40af);
     }
+
+    #carrito-total {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .acciones-carrito {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .acciones-carrito button {
+      margin: 0 10px;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      background-color: var(--primary-dark);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .acciones-carrito button:hover {
+      background-color: var(--primary);
+    }
   </style>
-  -->
 </head>
 <body>
   <header>
@@ -85,7 +99,7 @@
       <img src="../asset/images/logo.png" alt="Logo Centro Lalín" class="logo">
       <div class="header-titulos">
         <h1>Centro Lalín, Agolada y Silleda</h1>
-        <!-- <h2>Tienda</h2> -->
+        <!--<h2>Tienda - Carrito de Compras</h2>-->
       </div>
     </div>
   </header>
@@ -98,29 +112,34 @@
     </button>
     <ul>
       <li><a href="../index.html">Inicio</a></li>
-      <li><a href="../index.html#actividades">Actividades</a></li>
-      <li><a href="./tienda.html" class="active">Tienda</a></li>
+      <li><a href="./tienda.html">Tienda</a></li>
+      <li><a href="./carrito.html" class="active">Carrito</a></li>
       <li><a href="./contacto.html">Contacto</a></li>
-      <li><a href="./carrito.html" class="carrito-link">🛒 <span id="carrito-contador">0</span></a></li>
     </ul>
   </nav>
 
   <main>
     <section class="tienda-section">
-      <h2>Tienda de productos culturales</h2>
-      <h3>Descubrí nuestros artículos inspirados en la cultura gallega.</h3>
+      <h2>Carrito de compras</h2>
+      <h3>Revisá los productos que agregaste. Podés modificar las cantidades o eliminarlos antes de continuar.</h3>
     </section>
 
-    <section id="productos" class="productos-section">
-      <h2 style="text-align: center; margin-bottom: 2rem;">Productos disponibles</h2>
-      <div id="productos-container" class="productos-grid"></div>
+    <section class="productos-section">
+      <div id="carrito-container" class="productos-grid"></div>
     </section>
+
+    <div id="carrito-total"></div>
+
+    <div class="acciones-carrito">
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <button onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Alberto Sánchez - Todos los derechos reservados</p>
   </footer>
 
-  <script src="../js/fetch-gmigrante.js"></script>
+  <script src="../js/carrito.js"></script>
 </body>
 </html>
