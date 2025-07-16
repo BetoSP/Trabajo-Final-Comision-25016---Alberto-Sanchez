@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centro Lalín, Agolada y Silleda</title>
+  <link rel="shortcut icon" href="./asset/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./asset/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="./asset/images/logo.png" alt="Logo Centro Lalín" class="logo">
+      <div class="header-titulos">
+        <h1>Centro Lalín, Agolada y Silleda</h1>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="./pages/tienda.html">Tienda</a></li>
+      <li><a href="./pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <img src="./asset/images/hero.jpg" alt="Imagen principal" class="hero-img">
+    </section>
+
+    <section class="bloque-superior productos-section">
+      <div class="productos-grid">
+        <div class="bloque-superior-item">
+          <h2>Bienvenidos al Centro Lalín, Agolada y Silleda</h2>
+          <p>Nos alegra recibirte. Explorá nuestras actividades culturales y sumate a nuestra comunidad para compartir tradiciones, arte y raíces gallegas en Buenos Aires.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="actividades" class="productos-section">
+      <h2 class="titulo-actividades">Actividades culturales destacadas</h2>
+      <div class="productos-grid">
+        <div class="actividad">
+          <img src="./asset/images/alas.jpg" alt="Taller de escritura Alas para escribir" />
+          <h3>Taller de escritura "Alas para escribir"</h3>
+          <p>Desarrollá tu creatividad en nuestro taller de escritura.</p>
+          <a href="./pages/alas.html" target="_blank" rel="noopener noreferrer" class="btn-card">Más información</a>
+        </div>
+
+        <div class="actividad">
+          <img src="./asset/images/coro.jpg" alt="Coro" />
+          <h3>Coro del Centro Lalín, Agolada y Silleda</h3>
+          <p>Sumate a nuestro coro y disfrutá de la música tradicional gallega.</p>
+          <a href="./pages/coro.html" target="_blank" rel="noopener noreferrer" class="btn-card">Más información</a>
+        </div>
+
+        <div class="actividad">
+          <img src="./asset/images/gaitas.jpg" alt="Banda de Gaitas Gallegas Lembranzas do Deza" />
+          <h3>Agrupación de Gaitas Gallegas "Lembranzas do Deza"</h3>
+          <p>Aprendé y participá en la interpretación de la gaita gallega.</p>
+          <a href="./pages/gaitas.html" target="_blank" rel="noopener noreferrer" class="btn-card">Más información</a>
+        </div>
+
+        <div class="actividad">
+          <img src="./asset/images/danzas.jpg" alt="Banda de danzas gallegas Lembranzas do Deza" />
+          <h3>Agrupación de danzas gallegas "Lembranzas do Deza"</h3>
+          <p>Disfrutá y participá en las danzas típicas de Galicia.</p>
+          <a href="./pages/danzas.html" target="_blank" rel="noopener noreferrer" class="btn-card">Más información</a>
+        </div>
+
+        <div class="actividad">
+          <img src="./asset/images/costura.jpg" alt="Taller de confección de trajes típicos gallegos" />
+          <h3>Taller de confección de trajes típicos gallegos</h3>
+          <p>Aprendé a confeccionar los trajes tradicionales gallegos con expertas.</p>
+          <a href="./pages/costura.html" target="_blank" rel="noopener noreferrer" class="btn-card">Más información</a>
+        </div>
+      </div>
+    </section>
+
+    <!--<section id="productos" class="productos-section">
+      <h2>Actividades culturales disponibles</h2>
+      <div id="productos-container" class="productos-grid"></div>
+    </section>-->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberto Sánchez - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="./js/fetch-actividades.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda | Centro Lalín</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../asset/images/favicon.ico" type="image/x-icon" />
+  <!-- 
+  <style>
+    /* Mejora visual para el grid si el style.css no lo incluye correctamente */
+    .productos-section {
+      padding: 2rem;
+      background-color: var(--gray-light, #f9f9f9);
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .producto-card {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-medium, #ccc);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .producto-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .producto-card img {
+      max-width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .producto-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark, #1e40af);
+      margin-bottom: 0.5rem;
+    }
+
+    .producto-card p {
+      font-size: 0.95rem;
+      color: var(--gray-dark, #333);
+      margin-bottom: 0.5rem;
+    }
+
+    .producto-card .precio {
+      font-weight: bold;
+      color: green;
+      margin-bottom: 0.75rem;
+    }
+
+    .producto-card button {
+      background-color: var(--primary, #1e3a8a);
+      color: var(--white, #fff);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .producto-card button:hover {
+      background-color: var(--primary-dark, #1e40af);
+    }
+  </style>
+  -->
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="../asset/images/logo.png" alt="Logo Centro Lalín" class="logo">
+      <div class="header-titulos">
+        <h1>Centro Lalín, Agolada y Silleda</h1>
+        <!-- <h2>Tienda</h2> -->
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../index.html#actividades">Actividades</a></li>
+      <li><a href="./tienda.html" class="active">Tienda</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+      <li><a href="./carrito.html" class="carrito-link">🛒 <span id="carrito-contador">0</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="tienda-section">
+      <h2>Tienda de productos culturales</h2>
+      <h3>Descubrí nuestros artículos inspirados en la cultura gallega.</h3>
+    </section>
+
+    <section id="productos" class="productos-section">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Productos disponibles</h2>
+      <div id="productos-container" class="productos-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberto Sánchez - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="../js/fetch-gmigrante.js"></script>
+</body>
+</html>

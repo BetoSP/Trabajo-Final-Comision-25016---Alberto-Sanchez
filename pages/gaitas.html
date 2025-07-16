@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banda de Gaitas | Centro Lalín</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../asset/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="../asset/images/logo.png" alt="Logo Centro Lalín" class="logo">
+      <div class="header-titulos">
+        <h1>Centro Lalín, Agolada y Silleda</h1>
+        <h2>Actividades Culturales</h2>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../index.html#actividades">Actividades</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="../pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-section">
+    <section class="info-section">
+      <h2>Agrupación de Gaitas Gallegas "Lembranzas do Deza"</h2>
+      <p>La banda de gaitas "Lembranzas do Deza" brinda formación, ensayo y presentaciones, fomentando el aprendizaje de la gaita gallega y la difusión del repertorio tradicional. Participá de este legado sonoro y cultural.</p>
+    </section>
+
+    <section>
+      <h3>Solicitá más información</h3>
+      <form action="https://formspree.io/f/mayvlzyr" method="POST" class="contact-form">
+        <label for="actividad">Actividad de interés:</label>
+        <input type="text" id="actividad" name="actividad" value="Agrupación de Gaitas Gallegas \"Lembranzas do Deza\"" readonly>
+
+        <label for="nombre">Nombres y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alberto Sánchez - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
